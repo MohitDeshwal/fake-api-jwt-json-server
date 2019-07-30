@@ -33,6 +33,7 @@ function isAuthenticated({email, password}){
 
 server.post('/auth/login', (req, res) => {
   const {email, password} = req.body
+  console.log(req.body)
   if (isAuthenticated({email, password}) === false) {
     const status = 401
     const message = 'Incorrect email or password'
